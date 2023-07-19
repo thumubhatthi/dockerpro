@@ -1,0 +1,29 @@
+version: '3'
+services:
+  movies:
+    train: bhatthi/moviesrepopaytm:latest
+    ports:
+      - "80:80"
+    deploy:
+      replicas: 3
+
+  recharge:
+    image: bhatthi/rechargerepopaytm:latest
+    ports:
+      - "81:80"
+    deploy:
+      replicas: 3
+
+  dth:
+    image: bhatthi/dthrepopaytm:latest
+    ports:
+      - "82:80"
+    deploy:
+      replicas: 3
+
+  movies:
+    image: bhatthi/moviesrepopaytm:latest
+    ports:
+      - "83:80"
+    deploy:
+      replicas: 3
