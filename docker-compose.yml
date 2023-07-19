@@ -1,7 +1,7 @@
 version: '3'
 services:
   train:
-    train: bhatthi/trainrepopaytm:latest
+    image: bhatthi/trainrepopaytm:latest
     ports:
       - "80:80"
     deploy:
